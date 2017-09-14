@@ -1,9 +1,4 @@
-
-
-
 # Periode April-Mei-Juni
-
-
 
 ## Intro 
 
@@ -19,9 +14,8 @@ Er werden 2 projecten opgezet en 450 uur gepresteerd.
 
 
 
-* Apps/beacons: [Krookie App](https://github.com/lab9k/Krookie) (60%)
-
-* Blockchain: [Soupcoin](https://github.com/lab9k/SoupCoin) (40%)
+ * Apps/beacons: [Krookie App](https://github.com/lab9k/Krookie) (60%)
+ * Blockchain: [Soupcoin](https://github.com/lab9k/SoupCoin) (40%)
 
 
 
