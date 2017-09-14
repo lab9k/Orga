@@ -54,7 +54,7 @@ Er werd 380 uur gepresteerd op de volgende projecten:  
 
 Het **Reserveer vergaderzaal** verhaal was een klein experiment door Frederik Waeyaert aangehaald, het keek of het mogelijk was met gezichtsherkenning vergaderzalen te boeken. Belangrijkste lessons learned: nee. Het is niet mogelijk dit te doen binnen een context van de Groep Gent via OpenCV, er zijn té veel mensen binnen de groep om betrouwbare resultaten terug te krijgen. Zie hier [een demo](https://www.youtube.com/watch?v=giro7kRbgkc).
 
-Lab9kOS is een aanzet om meer structuur te krijgen, het is een tool waarbij de studenten hun uren kunnen opgeven voor de komende periode. Was nodig om de verwarring van wie komt wanneer op te heffen. Staat op [https://admin.lab9k.gent/](https://admin.lab9k.gent/) wordt gerbuikt. 
+Lab9kOS is een aanzet om meer structuur te krijgen, het is een tool waarbij de studenten hun uren kunnen opgeven voor de komende periode. Was nodig om de verwarring van wie komt wanneer op te heffen. Staat op [https://admin.lab9k.gent/](https://admin.lab9k.gent/) wordt gebruikt. 
 
 Open311: We hebben hier onderzocht of er een mogelijkheid is met open source tools iets te doen rond mapping, meldingen en routing. Er werd geëxperimenteerd met [https://www.ushahidi.com/](https://www.ushahidi.com/),  [FixMyStreet](https://github.com/mysociety/fixmystreet) en mapit.
 
