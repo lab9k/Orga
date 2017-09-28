@@ -28,7 +28,6 @@ The most simple plan is to have red in one direction while it's green in the oth
 ![https://i.imgur.com/boWT1zx.png](vplan)
 
 
-
 ## Solution: 
 
 In this project, we want to publish all v-plans of Ghent. So inhabitants and road users can verify if they work like they should. 
