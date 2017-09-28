@@ -34,6 +34,6 @@ Plenty of challenges to go around in this one. 
 
 **General Stuff:** This challenge was set up by [Lab9K](https://lab9k.github.io/), we challenge young people to have fun with new technology. We live on the peak of the Gartner Hype Cycle, just because we like the view. We've set up camp in the old library, feel free to come over and code. 
 
-We ❤ Open Source, check our [Github](https://github.com/lab9k). We'd like to encourage students to do the same, use open source and give back to the community.
+We ❤ Free Software, check our [Github](https://github.com/lab9k). We'd like to encourage students to do the same, use free code and give back to the community.
 
 
