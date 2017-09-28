@@ -25,7 +25,7 @@ Lights are everywhere, but some people don't get the basic princples. We get a l
 
 The most simple plan is to have red in one direction while it's green in the other, and nothing influences this. It get's more complex when there are more lights (example: for when you're turning right, seperate bike lights...) and when there are factors that influence it, for example pushbuttons, sensors, trams and busses...)
 
-![https://i.imgur.com/boWT1zx.png](vplan)
+![vplan](https://i.imgur.com/boWT1zx.png)
 
 
 ## Solution: 
