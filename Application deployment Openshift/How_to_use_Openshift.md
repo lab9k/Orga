@@ -5,7 +5,7 @@ First make sure that you're registered on openshift.
 Visit [this](https://manage.openshift.com/) website to login to openshift.  
 
 You can use the free tier subscription or the payed subscribtion. 
-now click on the right top of the page where the user 
+now click on the right top of the page where the username is displayed.
 
 ![](copylogincommand.PNG)
 
@@ -36,21 +36,56 @@ oc status
 ```
 
 ## Step 3 Deploy your application
-Once you are inside , you can use a Git repo to upload a .NET Core 2.0 app using the image stream (IS). 
-
-
 
 ### Dotnet CORE (C#)
+Once you are inside , you can use a Git repo to upload a .NET Core 2.0 app using the image stream (IS). 
 
+Here are URLs to use:
+
+* NET Core 2.0 source-to-image builder: registry.access.redhat.com/dotnet/dotnet-20-rhel7
+* NET Core 2.0 runtime image: registry.access.redhat.com/dotnet/dotnet-20-runtime-rhel7
+
+Use the right URL for the right purpose in the following command:
+
+```
+$ oc new-app registry.access.redhat.com/dotnet/dotnet-20-rhel7~https://github.com/openshift-evangelists/dotnet-core-2.0-example.git
+```
+
+your output should look like this when the application was created sucesfully:
+
+```
+$ oc status
+In project my project (myproject-fuseki) on server https://api.starter-ca-central-1.openshift.com:443
+
+svc/dotnet-core-20-example - 172.30.166.111:8080
+  dc/dotnet-core-20-example deploys istag/dotnet-core-20-example:latest <-
+    bc/dotnet-core-20-example source builds https://github.com/openshift-evangelists/dotnet-core-2.0-example.git on istag/dotnet-20-rhel7:latest
+    deployment #1 deployed 3 minutes ago - 1 pod
+
+View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
+```
+
+Your app should start deploying now. 
+
+
+
+
+Important sidenote: Minishift does not support dotnetcore base images.  
 
 
 ### Apache + MySQL (PHP)
-
 ### Nodejs (JS)
-
-
-
 ### Tomcat (Java)
+
+
+
+
+
+
+
+
+
+
 
 
 
