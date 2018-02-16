@@ -6,11 +6,11 @@ Alle Linked Open Data van de Stad Gent is bevraagbaar via een [“SPARQL endpoin
 
 
 
-## Voorbeeld queries:
+## Voorbeeld queries
 
 
 
-** Alle diensten/producten van de stad Gent weergeven **
+**Alle diensten/producten van de stad Gent weergeven**
 
 Door SELECT * te gebruiken worden de resultaten weergeggeven van alle variabels in de query.
 
