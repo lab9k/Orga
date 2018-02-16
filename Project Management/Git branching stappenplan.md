@@ -1,6 +1,6 @@
 # Stappenplan werken met GitHub
 
-**Belangrijk: NIEMAND commit op de master branch, volg onderstaand stappenplan!"**
+**Belangrijk: Gelieve NIET rechtstreeks op de Master branch te committen! Volg onderstaand stappenplan!**
 
 Gezien we werken met branches is het belangrijk dat iedereen hetzelfde stramien volgt. De basismethode gaat als volgt:
 
