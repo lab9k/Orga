@@ -13,9 +13,7 @@ Het is altijd een goed idee om te beginnen met de laatste versie van de master:
   git pull
   ```
 
-Maak daarna een nieuwe branch aan voor de feature waar je aan werkt. 
-
-Probeer een duidelijke naamgeving te hanteren: `taak/feature` is een goed begin. (voorbeeld: `ldap/toevoegen-gebruikers`)
+Maak daarna een nieuwe branch aan voor de feature waar je aan werkt. Probeer een duidelijke naamgeving te hanteren: `taak/feature` is een goed begin. (voorbeeld: `ldap/toevoegen-gebruikers`)
   ```bash
   git checkout -b taak/feature
   ```
@@ -51,9 +49,9 @@ Stel dat je per ongeluk een branch lokaal aanmaakt maar eigenlijk wou verbinden 
   git branch --set-upstream-to-origin/<remote branch> <lokale branch>
   ```
 
-## Nog een aantal (samenvattende) belangrijke puntjes:
+## Samenvatting
 
-- Wees steeds duidelijk en specifiek genoeg in de naam bij het aanmaken van een branch!
-- Een branch wordt aangemaakt per feature dat je wenst te pushen naar de master (implementatie en incrementeel werken) , niet gewoon een branch maken per persoon of per subgroep ! Dit maakt het ingewikkeld om alles correct te mergen.
-- Alvorens je een branch wenst aan te maken en/of te pushen door een pull request te doen, eerst steeds een pull van de upstream doen !
+- Wees steeds **duidelijk** en **specifiek** genoeg in de naam bij het aanmaken van een branch!
+- Een branch wordt aangemaakt **per feature** die je wenst te pushen naar de master-branch (implementatie en incrementeel werken). Dus niet gewoon een branch maken per persoon of per subgroep! Dit maakt het ingewikkeld om alles correct te mergen.
+- Alvorens je een branch wenst aan te maken en/of te pushen door een pull request te doen, **eerst steeds een pull** van de upstream doen !
 - **Elke branch wordt verwijderd nadat de request werd goedgekeurd en de betreffende branch werd gemerged!**
