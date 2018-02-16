@@ -4,7 +4,7 @@
 
 Gezien we werken met branches is het belangrijk dat iedereen hetzelfde stramien volgt. 
 
-##Basismethode
+## Basismethode
 
 De basismethode gaat als volgt:
 
@@ -51,7 +51,7 @@ Stel dat je per ongeluk een branch lokaal aanmaakt maar eigenlijk wou verbinden 
   git branch --set-upstream-to-origin/<remote branch> <lokale branch>
   ```
 
-**Nog een aantal (samenvattende) belangrijke puntjes:**
+## Nog een aantal (samenvattende) belangrijke puntjes:
 
 - Wees steeds duidelijk en specifiek genoeg in de naam bij het aanmaken van een branch!
 - Een branch wordt aangemaakt per feature dat je wenst te pushen naar de master (implementatie en incrementeel werken) , niet gewoon een branch maken per persoon of per subgroep ! Dit maakt het ingewikkeld om alles correct te mergen.
