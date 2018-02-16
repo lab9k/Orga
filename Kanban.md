@@ -1,6 +1,6 @@
 ## Integratie Kanban 
 
-https://github.com/lab9k/Skos/projects/1
+* https://github.com/lab9k/Skos/projects/1
 
 * **Integratie van Kanban binnen het Skosmos project:**
     * Kolommen: To do / In Progress / Testing / Done.
