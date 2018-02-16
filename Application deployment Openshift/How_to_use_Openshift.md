@@ -1,6 +1,6 @@
 # How to deploy an application on Openshift
 
-## Step 1: login/register on Openshift
+## Step 1: Login/register on Openshift
 First make sure that you're registered on openshift.
 Visit [this](https://manage.openshift.com/) website to login to openshift.  
 
@@ -15,6 +15,8 @@ The command should look something like this:
 ```
 oc login https://api.starter-ca-central-1.openshift.com --token=0wjddpyDNNfhsK_8cLCaiC6oKvy50B0medcPvGRXb8k
 ```
+
+## Step 2: Select a project or make a new project to deploy your application in
 
 After you login to your account you will get a list of projects that you can switch between
 
@@ -33,7 +35,7 @@ To show a high level overview of the current project:
 oc status
 ```
 
-## Step 2 Deploy your application/database
+## Step 3 Deploy your application
 Once you are inside , you can use a Git repo to upload a .NET Core 2.0 app using the image stream (IS). 
 
 
