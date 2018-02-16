@@ -6,8 +6,3 @@ Hier kan je de de verschillende [projecten](https://github.com/lab9k) bekijken.
 Feel free om [zelf een idee aan te brengen](https://github.com/lab9k/Orga/issues/new).
 
 Ben je geïnteresseerd om je aan te sluiten bij het Lab9k-team? Vul het formulier in op onze [website](https://lab9k.github.io/contact/)!
-
-Greeding, Lab9k-team.
-
-
-
