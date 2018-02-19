@@ -1,4 +1,5 @@
 # Linked Open Data documentatie
+	Linked open data is open data dat gestructureerd is om interlinked te zijn om het zo gemakkelijker te maken om te werken met semantic query
 
 Linked Open Data is conceptueel vrij eenvoudig. Er wordt ervan uit gegaan dat alles in de wereld kan uitgedrukt worden aan de hand van “feiten” en die feiten nemen de vorm aan van drie-delige constructies : “onderwerp - predikaat - voorwerp”. Dit worden  “triples” genoemd.
 
@@ -75,7 +76,7 @@ WHERE {
 [Resultaat van deze query](https://stad.gent/sparql?default-graph-uri=&query=PREFIX+schema%3A+%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+dct%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0ASELECT+%3Fproduct+%3Ftitel%0D%0AWHERE+%7B%0D%0A%3Fproduct+a+%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Fcpsv%23PublicService%3E.%0D%0A%3Fproduct+schema%3Aaudience+%3Chttp%3A%2F%2Fstad.gent%2Fdata%2Fns%2Fgpdc%2Fdoelgroepen%2Fonderneming%3E.%0D%0A%3Fproduct+dct%3Asubject+%3Chttp%3A%2F%2Fstad.gent%2Fdata%2Fns%2Fthemas%2Fnatuur-milieu%3E.%0D%0A%3Fproduct+dct%3Atitle+%3Ftitel%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on)
 
 
-### Recent museumnieuws
+**Recent museumnieuws**
 Een krantenredactie kan zo automatisch de 5 laatste nieuwsberichten van het Huis van Alijn en het SMAK opvragen:
 
 
