@@ -100,4 +100,5 @@ LIMIT 5
 [Resultaat van deze query](https://stad.gent/sparql?default-graph-uri=&query=%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0ASELECT+%3Farticle+%3Ftitel+%3Fpublished%0D%0AWHERE+%7B%0D%0A++VALUES+%3Forg+%7B%0D%0A++++%3Chttps%3A%2F%2Fstad.gent%2Fid%2Fagents%2Fa5294c55-f789-e111-a140-0050569826fc%3E%0D%0A++++%3Chttps%3A%2F%2Fstad.gent%2Fid%2Fagents%2F96677ab3-f689-e111-a140-0050569826fc%3E%0D%0A++%7D.%0D%0A++%3Farticle+a+schema%3ANewsArticle.%0D%0A++%3Farticle+schema%3AdatePublished+%3Fpublished.%0D%0A++%3Farticle+%3Chttp%3A%2F%2Fschema.org%2FsourceOrganization%3E+%3Forg.%0D%0A++%3Farticle+schema%3Aheadline+%3Ftitel%0D%0A%7D+ORDER+BY+DESC%28%3Fpublished%29+LIMIT+5&format=text%2Fhtml&timeout=0&debug=on)
 
 [Voorbeeld van onze eigen chatbot](https://github.com/lab9k/ChatbotGF/blob/master/ChatbotGF/Backend%20Chatbot%20Gentse%20Feesten/queries.json)
+
 [Extra voorbeelden](https://www.w3.org/2009/Talks/0615-qbe/#q1)
