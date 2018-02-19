@@ -1,6 +1,6 @@
 # How to deploy an application on Openshift
 
-# Requirements before you continue
+## Requirements before you continue
 * The source coded of your application hosted on github
 * 
 
@@ -41,7 +41,9 @@ oc status
 
 ## Step 3: Deploy your application
 
-### Dotnet CORE (C#)
+All base images can be find on [Redhat](https://access.redhat.com/containers/)
+
+### a.Dotnet CORE (C#)
 
 Enter the following command in your terminal to create your dotnet Core application.
 Replace the git repo with yours and specify the name of your application:
@@ -64,15 +66,46 @@ svc/dotnet-core-20-example - 172.30.166.111:8080
 View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
 ```  
 
-### Apache + MySQL (PHP)
+### b.Apache + MySQL (PHP)
 
 
 
-### Nodejs (JS)
+### c.Nodejs (JavaScript)
 
+Enter the following command in your terminal to create your NodeJS application. Replace the git repo with yours and specify the name of your application:
 
+```
+oc new-app --name=pillar-base nodejs~http://github.com/OpenShiftDemos/pillar-base
+``` 
 
-### Tomcat 8 (Java)
+The output should look something like this:
+
+```
+--> Found image 6f7f7d9 (5 weeks old) in image stream "nodejs" in project "openshift" under tag "0.10" for "nodejs"
+
+    Node.js 0.10 
+    ------------ 
+    Platform for building and running Node.js 0.10 applications
+
+    Tags: builder, nodejs, nodejs010
+
+    * A source build using source code from http://github.com/OpenShiftDemos/pillar-base will be created
+      * The resulting image will be pushed to image stream "pillar-base:latest"
+    * This image will be deployed in deployment config "pillar-base"
+    * Port 8080/tcp will be load balanced by service "pillar-base"
+      * Other containers can access this service through the hostname "pillar-base"
+
+--> Creating resources with label app=pillar-base ...
+    imagestream "pillar-base" created
+    buildconfig "pillar-base" created
+    deploymentconfig "pillar-base" created
+    service "pillar-base" created
+--> Success
+    Build scheduled, use 'oc logs -f bc/pillar-base' to track its progress.
+    Run 'oc status' to view your app
+```
+
+### d.Tomcat 8 (Java)
 
 Enter the following command in your terminal to create your Java application.
 Replace the git repo with yours and specify the name of your application:
@@ -109,7 +142,7 @@ The output should look something like this:
 ``` 
 
 
-Now we can run "oc status" to get information about your deployment 
+Now we can run "oc status" to get information about your deployment, the output should look like this:
 
 ```
 http://myapp-sample-project.44fs.preview.openshiftapps.com to pod port 8080-tcp (svc/myapp)
@@ -118,9 +151,6 @@ http://myapp-sample-project.44fs.preview.openshiftapps.com to pod port 8080-tcp 
       build #1 succeeded 2 minutes ago - 74cdd67: README added (Jorge Morales Pou <jorgemoralespou@users.noreply.github.com>)
     deployment #1 deployed 2 minutes ago - 1 pod
 ``` 
-
-
-
 
 
 ## Step 4: Create a route for your application
@@ -139,8 +169,7 @@ route "myapp" exposed
 
 ## Step 5: Rebuild your application or Configure autobuild (after git commit)
 
-When you have made code changes to your project you probably want to rebuild your application. You can rebuild you application manually or 
-automatically.  
+When you have made code changes to your project you probably want to rebuild your application. There are two options to rebuild you application manually or automatically:
 
 1.Manual rebuild
 
@@ -149,6 +178,4 @@ oc start-build myapp
 ``` 
 
 2.Auto rebuild
-You can also configure autobuild to automize this process:
-
-
+Configure openshift to automize rebuild process after a git push.
