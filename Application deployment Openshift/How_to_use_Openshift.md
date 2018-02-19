@@ -51,7 +51,7 @@ Use the right URL for the right purpose in the following command:
 $ oc new-app registry.access.redhat.com/dotnet/dotnet-20-rhel7~https://github.com/openshift-evangelists/dotnet-core-2.0-example.git
 ```
 
-your output should look like this when the application was created sucesfully:
+Your output should look like this when the application was created sucesfully:
 
 ```
 $ oc status
@@ -66,8 +66,20 @@ View details with 'oc describe <resource>/<name>' or list everything with 'oc ge
 ```  
 
 
-### Apache + MySQL (PHP)
+### Apache httpd
+
+
+
+
+
+
+
+
+
+
+
 ### Nodejs (JS)
+
 ### Tomcat (Java)
 
 
