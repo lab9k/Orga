@@ -66,27 +66,34 @@ svc/dotnet-core-20-example - 172.30.166.111:8080
 View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
 ```  
 
-### b.Apache + MySQL (PHP)
-
-
-
 ### c.Nodejs (JavaScript)
 
 ### Apache httpd
 
+The base image initializes PHP v7.0 with Apache 2.4 for a webserver. The used repository below is a PHP project.
 
+```
+oc new-app registry.access.redhat.com/rhscl/php-70-rhel7~https://github.com/Jefwillems/skosmos.git
+```
 
+Your output should look like this when the application was created sucesfully:
 
+```
+[rbruggeman@localhost Orga]$ oc status
+In project php-mysql-test on server https://api.starter-ca-central-1.openshift.com:443
 
+http://skosmos-php-mysql-test.193b.starter-ca-central-1.openshiftapps.com to pod port 8080-tcp (svc/skosmos)
+  dc/skosmos deploys istag/skosmos:latest <-
+    bc/skosmos source builds https://github.com/Jefwillems/skosmos.git on istag/php-70-rhel7:latest 
+    deployment #1 deployed 34 minutes ago - 1 pod
 
+View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
 
+```  
 
-
-
-
-### Nodejs (JS)
 
 ### Tomcat (Java)
+
 Enter the following command in your terminal to create your NodeJS application. Replace the git repo with yours and specify the name of your application:
 
 ```
@@ -168,7 +175,11 @@ http://myapp-sample-project.44fs.preview.openshiftapps.com to pod port 8080-tcp 
 ``` 
 
 
-## Step 4: Create a route for your application
+## Step 4: Add a database to your application (MySQL or MongoDB)
+
+
+## Step 5: Create a route for your application
+
 OpenShift automatically created a new service for our application we just deployed, according to the name of the application. Now, let’s expose that service, to do that, run this command:
 
 ```
@@ -182,7 +193,7 @@ route "myapp" exposed
 ``` 
 
 
-## Step 5: Rebuild your application or Configure autobuild (after git commit)
+## Step 6: Rebuild your application or Configure autobuild (after git commit)
 
 When you have made code changes to your project you probably want to rebuild your application. There are two options to rebuild you application manually or automatically:
 
