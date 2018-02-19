@@ -13,6 +13,7 @@ Alle Linked Open Data van de Stad Gent is bevraagbaar via een [“SPARQL endpoin
 - **Result clause**: Om te kiezen welke data je moet terugkrijgen van de query.
 - **Query pattern**: specificeren waarnaar moet worden gezocht in de onderliggende dataset.
 - **Query modifiers**: Om je resultaten die je terugkrijgt van je query te ordenen.
+
 > ? of $ zijn aanduidingen van variabelen
 
 ```
