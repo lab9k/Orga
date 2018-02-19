@@ -137,7 +137,18 @@ route "myapp" exposed
 ``` 
 
 
+## Step 5: Rebuild your application or Configure autobuild (after git commit)
+
+When you have made code changes to your project you probably want to rebuild your application. You can rebuild you application manually or 
+automatically.  
+
+1.Manual rebuild
+
+```
+oc start-build myapp
+``` 
+
+2.Auto rebuild
+You can also configure autobuild to automize this process:
 
 
-
-## Step 5: Configure autobuild (after git commit)
