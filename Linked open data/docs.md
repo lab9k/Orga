@@ -2,9 +2,37 @@
 
 Linked Open Data is conceptueel vrij eenvoudig. Er wordt ervan uit gegaan dat alles in de wereld kan uitgedrukt worden aan de hand van “feiten” en die feiten nemen de vorm aan van drie-delige constructies : “onderwerp - predikaat - voorwerp”. Dit worden  “triples” genoemd.
 
-Alle Linked Open Data van de Stad Gent is bevraagbaar via een [“SPARQL endpoint”](stad.gent/sparql).
+Alle Linked Open Data van de Stad Gent is bevraagbaar via een [“SPARQL endpoint”](https://stad.gent/sparql).
 
+##SPARQL (Protocol And RDF Query Language)
+	SPARQL is een RDF Query Language wat wil zeggen dat het een semantic query language is voor databases dat data kan ophalen in het RDF format. Dit is een standaard volgens RDF Data Access Working Group van de W3C.
 
+**Structuur van een SPARQL query**
+
+- **Prefix declaration**: Wordt gebruikt om een namespace te creëren bij een bepaalde URI zodat je in je query's niet altijd de volle URI moet schrijven.
+- **Result clause**: Om te kiezen welke data je moet terugkrijgen van de query.
+- **Query pattern**: specificeren waarnaar moet worden gezocht in de onderliggende dataset.
+- **Query modifiers**: Om je resultaten die je terugkrijgt van je query te ordenen.
+> ? of $ zijn aanduidingen van variabelen
+
+```
+# Prefix declaration
+PREFIX ex: <http://example.com/exampleOntology#>
+# Result clause
+SELECT ?capital
+       ?country
+# Query pattern
+WHERE
+  {
+    ?x  ex:cityname       ?capital   ;
+        ex:isCapitalOf    ?y         .
+    ?y  ex:countryname    ?country   ;
+        ex:isInContinent  ex:Africa  .
+  }
+# Query modifiers
+ORDER BY DESC(?capital)
+LIMIT 100
+```
 
 ## Voorbeeld queries
 
