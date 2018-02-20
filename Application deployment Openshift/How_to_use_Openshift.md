@@ -109,8 +109,8 @@ Optional: to manually add a hostname as the route for your application, enter th
 oc expose svc/nodejs-ex --hostname=www.example.com
 ``` 
 
-Note: You can find the URL, where your application is hosted, in the web console > **Applications** > **Services** and there you can choose the right service.
-Note: If you also would like to connect a database, like MongoDB, please refer to step 4.2 .
+* Note: You can find the URL, where your application is hosted, in the web console > **Applications** > **Services** and there you can choose the right service. (Refer to step 6 to enable a hostname and a route)
+* Note: If you also would like to connect a database, like MongoDB, please refer to step 4.2 .
 
 
 ### 3.3. Apache httpd
