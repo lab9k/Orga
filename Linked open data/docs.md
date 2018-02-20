@@ -9,7 +9,7 @@ Alle Linked Open Data van de Stad Gent is bevraagbaar via een [“SPARQL endpoin
 
 ## SPARQL (Protocol And RDF Query Language)
 
-* *SPARQL is een RDF Query Language wat wil zeggen dat het een semantic query language is voor databases dat data kan ophalen in het RDF format. Dit is een standaard volgens RDF Data Access Working Group van de W3C.*
+> *SPARQL is een RDF Query Language wat wil zeggen dat het een semantic query language is voor databases dat data kan ophalen in het RDF format. Dit is een standaard volgens RDF Data Access Working Group van de W3C.*
 
 **Structuur van een SPARQL query**
 
