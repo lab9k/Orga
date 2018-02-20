@@ -1,11 +1,27 @@
 # How to deploy an application on Openshift
 
-## Step 1: Login/register on Openshift
+## Step 1: Register on Openshift
 First make sure that you're registered on openshift.
-Visit [this](https://manage.openshift.com/) website to login to openshift.  
+If not register yourself by visiting [this](https://manage.openshift.com/) website. 
 
-You can use the free tier subscription or the payed subscribtion. 
-now click on the right top of the page where the username is displayed.
+## Step 2: Login on Openshift webconsole
+Fill in your credentials and login [this](https://manage.openshift.com/) website. 
+
+When you're logged in you will get a screen to choose between the free tier subscription or the payed subscribtion. 
+
+## Step 3: Install oc CLI tool
+Now click on the question mark on the right top of the page. 
+Click on command line tools
+
+![](install_CLI_OC.PNG)
+
+Then you need to click on the blue windows link, a zip will start downloading.
+Unzip this archive with a ZIP program and move the oc binary to a directory.
+add that directory to your environment variables in windows so you can acces the oc command in your terminal. 
+
+## Step 4: Login with oc CLI tool
+Now click on the username on the right top of the page.
+Then click "copy login command". 
 
 ![](copylogincommand.PNG)
 
@@ -16,7 +32,7 @@ The command should look something like this:
 oc login https://api.starter-ca-central-1.openshift.com --token=0wjddpyDNNfhsK_8cLCaiC6oKvy50B0medcPvGRXb8k
 ```
 
-## Step 2: Select a project or make a new project to deploy your application in
+## Step 5: Select a project or make a new project to deploy your application in
 
 After you login to your account you will get a list of projects that you can switch between
 
@@ -35,7 +51,7 @@ To show a high level overview of the current project:
 oc status
 ```
 
-## Step 3: Deploy your application
+## Step 6: Deploy your application
 
 All base images can be find on [Redhat](https://access.redhat.com/containers/)
 
@@ -169,16 +185,14 @@ http://myapp-sample-project.44fs.preview.openshiftapps.com to pod port 8080-tcp 
 ``` 
 
 
-## Step 4: Add a database to your application (MySQL or MongoDB)
+## Step 7: Add a database to your application (MySQL or MongoDB)
 
 a. MySQL
 
 Use the following command to create a new database:
 
 ```
-oc new-app -e \
-    MYSQL_USER=<username>,MYSQL_PASSWORD=<password>,MYSQL_DATABASE=<database_name> \
-    registry.access.redhat.com/openshift3/mysql-55-rhel7 
+oc new-app -e MYSQL_USER=<username>,MYSQL_PASSWORD=<password>,MYSQL_DATABASE=<database_name>     registry.access.redhat.com/openshift3/mysql-55-rhel7 
 ``` 
 
 Now we need to connect the database with our application.
@@ -213,7 +227,7 @@ b. MongoDB
 
 
 
-## Step 5: Create a route for your application
+## Step 8: Create a route for your application
 
 OpenShift automatically created a new service for our application we just deployed, according to the name of the application. Now, let’s expose that service, to do that, run this command:
 
@@ -245,7 +259,7 @@ url = http://testdatabaseapp-testrubenproject.193b.starter-ca-central-1.openshif
 the url of the application should appear in the output. Use that url to see your working application.
 
 
-## Step 6: Rebuild your application or Configure autobuild (after git commit)
+## Step 9: Rebuild your application or Configure autobuild (after git commit)
 
 When you have made code changes to your project you probably want to rebuild your application. There are two options to rebuild you application manually or automatically:
 
@@ -275,3 +289,12 @@ Configure openshift to automize rebuild process after a git push.
 After you save your webhook, if you refresh your settings page you can see the status of the ping that Github sent to OpenShift to verify it can reach the server.
 
 Note: adding a webhook requires your OpenShift server to be reachable from GitHub.
+
+
+
+
+
+
+
+
+https://docs.openshift.com/enterprise/3.0/cli_reference/get_started_cli.html
