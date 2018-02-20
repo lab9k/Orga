@@ -200,7 +200,7 @@ http://myapp-sample-project.44fs.preview.openshiftapps.com to pod port 8080-tcp 
 Use the following command to create a new database:
 
 ```
-oc new-app -e MYSQL_USER=<username> MYSQL_PASSWORD=<password> MYSQL_DATABASE=<database_name>    registry.access.redhat.com/openshift3/mysql-55-rhel7 
+oc new-app -e MYSQL_USER=username -e MYSQL_PASSWORD=password -e MYSQL_DATABASE=database_name registry.access.redhat.com/openshift3/mysql-55-rhel7 
 ``` 
 
 Now we need to connect the database with our application.
