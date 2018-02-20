@@ -177,6 +177,28 @@ http://myapp-sample-project.44fs.preview.openshiftapps.com to pod port 8080-tcp 
 
 ## Step 4: Add a database to your application (MySQL or MongoDB)
 
+a. MySQL
+
+Use the following command to create a new database with the 
+
+```
+oc new-app -e \
+    MYSQL_USER=<username>,MYSQL_PASSWORD=<password>,MYSQL_DATABASE=<database_name> \
+    registry.access.redhat.com/openshift3/mysql-55-rhel7 
+``` 
+
+registry.access.redhat.com/rhscl/mysql-57-rhel7
+
+Adjust system variables for your application that needs to connect to the database. 
+
+```
+oc env dc phpdatabase -e MYSQL_USER=myuser  -e MYSQL_PASSWORD=mypassword -e MYSQL_DATABASE=mydatabase 
+``` 
+
+Read the docs on openshift if you want to add a database into MySQL.
+
+b. MongoDB
+
 
 ## Step 5: Create a route for your application
 
@@ -191,17 +213,38 @@ And you should see something like this as output:
 ```
 route "myapp" exposed
 ``` 
+Now you need to know what your URL is, execute the following command:
+
+```
+oc status
+``` 
+
+the url of the application should appear in the output.
 
 
 ## Step 6: Rebuild your application or Configure autobuild (after git commit)
 
 When you have made code changes to your project you probably want to rebuild your application. There are two options to rebuild you application manually or automatically:
 
-1.Manual rebuild
+### a.Manual rebuild
 
 ```
 oc start-build myapp
 ``` 
 
-2.Auto rebuild
+### b.Auto rebuild
 Configure openshift to automize rebuild process after a git push.
+1.Login on [openshift](https://manage.openshift.com/)
+1.From the Web Console homepage, navigate to your project
+2.Click on Browse > Builds
+3.Click the link with your BuildConfig name
+4.Click the Configuration tab
+5.Click the "Copy to clipboard" icon to the right of the "GitHub webhook URL" field
+6.Navigate to your repository on GitHub and click on repository settings > webhooks > Add webhook
+7.Paste your webhook URL provided by OpenShift
+8.Leave the defaults for the remaining fields — that's it!
+
+
+After you save your webhook, if you refresh your settings page you can see the status of the ping that Github sent to OpenShift to verify it can reach the server.
+
+Note: adding a webhook requires your OpenShift server to be reachable from GitHub.
