@@ -109,7 +109,7 @@ You can check the status of the build with the following command:
 oc status
 ```
 
-Optional: to manually add a hostname as the route for you application, enter the following command:
+Optional: to manually add a hostname as the route for your application, enter the following command:
 
 ```
 oc expose svc/nodejs-ex --hostname=www.example.com
