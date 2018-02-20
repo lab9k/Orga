@@ -247,7 +247,7 @@ You may have noticed the index page "Page view count" reads "No database configu
 Note: Please pay attention when you copy-paste the command below ! This command sets the environment variables !
 
 ```
-$ oc new-app centos/mongodb-26-centos7 -e MONGODB_USER=admin MONGODB_DATABASE=mongo_db MONGODB_PASSWORD=secret MONGODB_ADMIN_PASSWORD=supersecret
+$ oc new-app centos/mongodb-26-centos7 -e MONGODB_USER=admin MONGODB_DATABASE=mongo_db MONGODB_PASSWORD=secret MONGODB_ADMIN_PASSWORD=secret
 ```
 
 Optional: To take a look at environment variables set for each pod, run `oc env pods --all --list`.
