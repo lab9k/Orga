@@ -183,13 +183,24 @@ oc new-app -e \
 
 Now we need to connect the database with our application.
 We can do that by setting the environment variables of the application.
-Execute the following command to set the  
+Execute the following command to know which ip address and port number we need to set in the environment variables.
 
 ```
-oc env dc nameofyourapp -e MYSQL_USER=myuser  -e MYSQL_PASSWORD=mypassword -e MYSQL_DATABASE=mydatabase -e MYSQL_
+oc status
 ``` 
 
+ip address = 172.30.227.83
+port = 3306
 
+Execute the following command and fill in the appropriate values for the database.   
+
+```
+oc env dc nameofyourapp -e MYSQL_USER=myuser -e MYSQL_PASSWORD=mypassword -e MYSQL_DATABASE=mydatabase -e MYSQL_SERVICE_HOST=<ip address> -e MYSQL_SERVICE_PORT=<portnumber>
+``` 
+
+sidenote: the name of the variables can depend on you application.
+
+oc status
 
 b. MongoDB
 
