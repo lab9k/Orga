@@ -224,21 +224,25 @@ When you have made code changes to your project you probably want to rebuild you
 
 ### a.Manual rebuild
 
+Execute the following command:
+
 ```
 oc start-build myapp
 ``` 
 
+The project should start rebuilding. 
+
 ### b.Auto rebuild
 Configure openshift to automize rebuild process after a git push.
-1.Login on [openshift](https://manage.openshift.com/)
-1.From the Web Console homepage, navigate to your project
-2.Click on Browse > Builds
-3.Click the link with your BuildConfig name
-4.Click the Configuration tab
-5.Click the "Copy to clipboard" icon to the right of the "GitHub webhook URL" field
-6.Navigate to your repository on GitHub and click on repository settings > webhooks > Add webhook
-7.Paste your webhook URL provided by OpenShift
-8.Leave the defaults for the remaining fields — that's it!
+1. Login on [openshift](https://manage.openshift.com/)
+2. From the Web Console homepage, navigate to your project
+3. Click on Browse > Builds
+4. Click the link with your BuildConfig name
+5. Click the Configuration tab
+6. Click the "Copy to clipboard" icon to the right of the "GitHub webhook URL" field
+7. Navigate to your repository on GitHub and click on repository settings > webhooks > Add webhook
+8. Paste your webhook URL provided by OpenShift
+9. Leave the defaults for the remaining fields — that's it!
 
 
 After you save your webhook, if you refresh your settings page you can see the status of the ping that Github sent to OpenShift to verify it can reach the server.
