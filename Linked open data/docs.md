@@ -1,12 +1,14 @@
 # Linked Open Data documentatie
-	Linked open data is open data dat gestructureerd is om interlinked te zijn om het zo gemakkelijker te maken om te werken met semantic query
+
+* *Linked open data is open data dat gestructureerd is om interlinked te zijn om het zo gemakkelijker te maken om te werken met semantic query*
 
 Linked Open Data is conceptueel vrij eenvoudig. Er wordt ervan uit gegaan dat alles in de wereld kan uitgedrukt worden aan de hand van “feiten” en die feiten nemen de vorm aan van drie-delige constructies : “onderwerp - predikaat - voorwerp”. Dit worden  “triples” genoemd.
 
 Alle Linked Open Data van de Stad Gent is bevraagbaar via een [“SPARQL endpoint”](https://stad.gent/sparql).
 
 ## SPARQL (Protocol And RDF Query Language)
-	SPARQL is een RDF Query Language wat wil zeggen dat het een semantic query language is voor databases dat data kan ophalen in het RDF format. Dit is een standaard volgens RDF Data Access Working Group van de W3C.
+
+* *SPARQL is een RDF Query Language wat wil zeggen dat het een semantic query language is voor databases dat data kan ophalen in het RDF format. Dit is een standaard volgens RDF Data Access Working Group van de W3C.*
 
 **Structuur van een SPARQL query**
 
