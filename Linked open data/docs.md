@@ -151,7 +151,21 @@ in C# kun je best eerst je queries apart instellen in een JSON file
 ```
 [volledig code](https://github.com/lab9k/ChatbotGF/blob/master/ChatbotGF/Backend%20Chatbot%20Gentse%20Feesten/queries.json)
 
-En daarna roep je deze dan op en kopel je de stukken queries aan elkaar om zo je volledige query uit te kunnen voeren
+dan maak je een IConfigurationroot Querystore dat de JSON file init en een public string getQuery die deze oproept per naam
+
+```
+private IConfigurationRoot QueryStore;
+QueryStore = init("queries.json");
+
+public string GetQuery(string name)
+{
+    return QueryStore[name];
+}
+```
+
+[Volledige code](https://github.com/lab9k/ChatbotGF/blob/master/ChatbotGF/Backend%20Chatbot%20Gentse%20Feesten/Data/DataConstants.cs)
+
+En daarna roep je deze dan op en koppel je de stukken queries aan elkaar om zo je volledige query uit te kunnen voeren
 
 ```
 string query = constants.GetQuery("base") + string.Format(constants.GetQuery("EventsNowHere"), locationfilter, startdatefilter, enddatefilter, nextdatefilter,count);
