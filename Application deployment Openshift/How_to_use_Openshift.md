@@ -229,10 +229,20 @@ route "myapp" exposed
 Now you need to know what your URL is, execute the following command:
 
 ```
-oc status
+$oc status
+In project testrubenproject on server https://api.starter-ca-central-1.openshift.com:443
+
+svc/mysql - 172.30.227.83:3306
+  dc/mysql deploys openshift/mysql:5.7
+    deployment #2 deployed about an hour ago - 1 pod
+    deployment #1 failed about an hour ago: The deployment was cancelled by the user
+
+http://testdatabaseapp-testrubenproject.193b.starter-ca-central-1.openshiftapps.com to pod port 8080-tcp (svc/testdatabaseapp)
 ``` 
 
-the url of the application should appear in the output. Use that url to see your working app.
+url = http://testdatabaseapp-testrubenproject.193b.starter-ca-central-1.openshiftapps.com
+
+the url of the application should appear in the output. Use that url to see your working application.
 
 
 ## Step 6: Rebuild your application or Configure autobuild (after git commit)
