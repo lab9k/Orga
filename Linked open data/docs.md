@@ -1,6 +1,7 @@
 # Linked Open Data documentatie
 
-* *Linked open data is open data dat gestructureerd is om interlinked te zijn om het zo gemakkelijker te maken om te werken met semantic query*
+> *Linked open data is open data dat gestructureerd is om interlinked te zijn om het zo gemakkelijker te maken om te werken met semantic query*
+
 
 Linked Open Data is conceptueel vrij eenvoudig. Er wordt ervan uit gegaan dat alles in de wereld kan uitgedrukt worden aan de hand van “feiten” en die feiten nemen de vorm aan van drie-delige constructies : “onderwerp - predikaat - voorwerp”. Dit worden  “triples” genoemd.
 
