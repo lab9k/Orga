@@ -252,6 +252,8 @@ $ oc new-app centos/mongodb-26-centos7 -e MONGODB_USER=admin MONGODB_DATABASE=mo
 
 Optional: To take a look at environment variables set for each pod, run `oc env pods --all --list`.
 
+**Important: check the cluster IP address and port with the command `oc status`. You should see something like this: `svc/mongodb-26-centos7 - <IP>:<port>`. You have to replace your IP and port with the variables in the command below !**
+
 We need to add the environment variable MONGO_URL to our Node.js web app so that it will utilize our MongoDB, and enable the "Page view count" feature. Run:
 
 ```
