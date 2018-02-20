@@ -1,9 +1,5 @@
 # How to deploy an application on Openshift
 
-## Requirements before you continue
-* The source coded of your application hosted on github
-* 
-
 ## Step 1: Login/register on Openshift
 First make sure that you're registered on openshift.
 Visit [this](https://manage.openshift.com/) website to login to openshift.  
@@ -68,31 +64,6 @@ View details with 'oc describe <resource>/<name>' or list everything with 'oc ge
 
 ### c.Nodejs (JavaScript)
 
-### Apache httpd
-
-The base image initializes PHP v7.0 with Apache 2.4 for a webserver. The used repository below is a PHP project.
-
-```
-oc new-app registry.access.redhat.com/rhscl/php-70-rhel7~https://github.com/Jefwillems/skosmos.git
-```
-
-Your output should look like this when the application was created sucesfully:
-
-```
-[rbruggeman@localhost Orga]$ oc status
-In project php-mysql-test on server https://api.starter-ca-central-1.openshift.com:443
-
-http://skosmos-php-mysql-test.193b.starter-ca-central-1.openshiftapps.com to pod port 8080-tcp (svc/skosmos)
-  dc/skosmos deploys istag/skosmos:latest <-
-    bc/skosmos source builds https://github.com/Jefwillems/skosmos.git on istag/php-70-rhel7:latest 
-    deployment #1 deployed 34 minutes ago - 1 pod
-
-View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
-
-```  
-
-
-### Tomcat (Java)
 
 Enter the following command in your terminal to create your NodeJS application. Replace the git repo with yours and specify the name of your application:
 
@@ -126,6 +97,29 @@ The output should look something like this:
     Build scheduled, use 'oc logs -f bc/pillar-base' to track its progress.
     Run 'oc status' to view your app
 ```
+
+### Apache httpd
+
+The base image initializes PHP v7.0 with Apache 2.4 for a webserver. The used repository below is a PHP project.
+
+```
+oc new-app registry.access.redhat.com/rhscl/php-70-rhel7~https://github.com/Jefwillems/skosmos.git
+```
+
+Your output should look like this when the application was created sucesfully:
+
+```
+[rbruggeman@localhost Orga]$ oc status
+In project php-mysql-test on server https://api.starter-ca-central-1.openshift.com:443
+
+http://skosmos-php-mysql-test.193b.starter-ca-central-1.openshiftapps.com to pod port 8080-tcp (svc/skosmos)
+  dc/skosmos deploys istag/skosmos:latest <-
+    bc/skosmos source builds https://github.com/Jefwillems/skosmos.git on istag/php-70-rhel7:latest 
+    deployment #1 deployed 34 minutes ago - 1 pod
+
+View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
+
+```  
 
 ### d.Tomcat 8 (Java)
 
@@ -179,7 +173,7 @@ http://myapp-sample-project.44fs.preview.openshiftapps.com to pod port 8080-tcp 
 
 a. MySQL
 
-Use the following command to create a new database with the 
+Use the following command to create a new database:
 
 ```
 oc new-app -e \
@@ -187,17 +181,19 @@ oc new-app -e \
     registry.access.redhat.com/openshift3/mysql-55-rhel7 
 ``` 
 
-registry.access.redhat.com/rhscl/mysql-57-rhel7
-
-Adjust system variables for your application that needs to connect to the database. 
+Now we need to connect the database with our application.
+We can do that by setting the environment variables of the application.
+Execute the following command to set the  
 
 ```
-oc env dc phpdatabase -e MYSQL_USER=myuser  -e MYSQL_PASSWORD=mypassword -e MYSQL_DATABASE=mydatabase 
+oc env dc nameofyourapp -e MYSQL_USER=myuser  -e MYSQL_PASSWORD=mypassword -e MYSQL_DATABASE=mydatabase -e MYSQL_
 ``` 
 
-Read the docs on openshift if you want to add a database into MySQL.
+
 
 b. MongoDB
+
+
 
 
 ## Step 5: Create a route for your application
@@ -219,7 +215,7 @@ Now you need to know what your URL is, execute the following command:
 oc status
 ``` 
 
-the url of the application should appear in the output.
+the url of the application should appear in the output. Use that url to see your working app.
 
 
 ## Step 6: Rebuild your application or Configure autobuild (after git commit)
