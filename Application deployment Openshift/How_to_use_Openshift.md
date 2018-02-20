@@ -202,7 +202,7 @@ http://myapp-sample-project.44fs.preview.openshiftapps.com to pod port 8080-tcp 
 
 ## Step 7: Add a database to your application (MySQL or MongoDB)
 
-**7.1. MySQL:**
+### 7.1. MySQL:
 
 
 Use the following command to create a new database:
@@ -239,7 +239,7 @@ The database should be connected with the application now.
 sidenote: the name of the variables can depend on the application.
 
 
-**7.2. MongoDB:**
+### 7.2. MongoDB:
 
 
 You may have noticed the index page "Page view count" reads "No database configured". Let's fix that by adding a MongoDB service. We could use the second OpenShift template example (nodejs-mongodb.json) but for the sake of demonstration let's point oc new-app at a DockerHub image:
