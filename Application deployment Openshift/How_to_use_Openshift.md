@@ -39,7 +39,7 @@ oc status
 
 All base images can be find on [Redhat](https://access.redhat.com/containers/)
 
-### a.Dotnet CORE (C#)
+### a.Dotnet CORE 2.0 (C#)
 
 Enter the following command in your terminal to create your dotnet Core application.
 Replace the git repo with yours and specify the name of your application:
@@ -62,7 +62,7 @@ svc/dotnet-core-20-example - 172.30.166.111:8080
 View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
 ```  
 
-### c.Nodejs (JavaScript)
+### b.Nodejs (JavaScript)
 
 
 Enter the following command in your terminal to create your NodeJS application. Replace the git repo with yours and specify the name of your application:
@@ -98,7 +98,7 @@ The output should look something like this:
     Run 'oc status' to view your app
 ```
 
-### Apache httpd
+### c.Apache PHP 7.0 
 
 The base image initializes PHP v7.0 with Apache 2.4 for a webserver. The used repository below is a PHP project.
 
@@ -186,7 +186,13 @@ We can do that by setting the environment variables of the application.
 Execute the following command to know which ip address and port number we need to set in the environment variables.
 
 ```
-oc status
+$oc status
+In project testrubenproject on server https://api.starter-ca-central-1.openshift.com:443
+
+svc/mysql - 172.30.227.83:3306
+  dc/mysql deploys openshift/mysql:5.7
+    deployment #2 deployed about an hour ago - 1 pod
+    ...
 ``` 
 
 ip address = 172.30.227.83
@@ -198,9 +204,9 @@ Execute the following command and fill in the appropriate values for the databas
 oc env dc nameofyourapp -e MYSQL_USER=myuser -e MYSQL_PASSWORD=mypassword -e MYSQL_DATABASE=mydatabase -e MYSQL_SERVICE_HOST=<ip address> -e MYSQL_SERVICE_PORT=<portnumber>
 ``` 
 
-sidenote: the name of the variables can depend on you application.
+The database should be connected with the application now.  
 
-oc status
+sidenote: the name of the variables can depend on the application.
 
 b. MongoDB
 
