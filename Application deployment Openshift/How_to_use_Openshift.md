@@ -22,9 +22,11 @@ Click on command line tools
 
 ![](install_CLI_OC.PNG)
 
-Then you need to click on the blue windows link, a zip will start downloading.
+Then you need to click on the appropriate download link, a zip will start downloading.
+![](download_page.png)
+
 Unzip this archive with a ZIP program and move the oc binary to a directory.
-add that directory to your environment variables in windows so you can acces the oc command in your terminal. 
+add that directory to your environment variables in windows so you can acces the oc command in your terminal. On mac you can check you path with the * $PATH * command. 
 
 ## Step 4: Login with oc CLI tool
 Now click on the username on the right top of the page.
