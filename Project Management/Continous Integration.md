@@ -1,4 +1,6 @@
-### Proof Of Concept: CI Travis (20/02/2018)
+## Proof Of Concept: CI 
+
+### Travis (20/02/2018)
 
 - [OpenShift Deployment with GitHub](https://docs.travis-ci.com/user/deployment/openshift/)
 - [Travis CI Quickstart](https://hub.openshift.com/quickstarts/26-travis-ci)
@@ -19,3 +21,13 @@
 
 * **Bottleneck Skosmos:**
     * Momenteel werken degene, die met het [Skosmos](https://github.com/lab9k/Skos) project bezig zijn, niet echt opbouwend (niet continu met dezelfde application) en wordt er vaak terug van scratch begonnen (new app) . Hierdoor dient Travis steeds opnieuw geconfigureerd & gelinkt te worden aan deze nieuwe application. (zie bovenstaande documentatie)
+    
+
+### BuildConfig (22/02/2018)
+
+* **BuildConfig** blijkt een eenvoudigere tool te zijn, zeker voor het Skosmos project: 
+  * Het is veel toegankelijker dan Travis.
+  * Het is niet vereist om zelf configuraties door te voeren of credentials toe te voegen voor de connectie te leggen.
+  * Heel flexibel door enkel een Webhook URL toe te voegen voor de betreffende Git repository.
+    
+
