@@ -4,7 +4,7 @@
 
 ## Requirements before you continue
 
-* The source coded of your application hosted on github
+* The source code of your application hosted on github
 
 ## Step 1: Login/register on Openshift
 
