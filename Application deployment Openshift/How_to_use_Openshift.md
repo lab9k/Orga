@@ -12,7 +12,7 @@ First make sure that you're registered on openshift.
 If not register yourself by visiting [this](https://manage.openshift.com/) website. 
 
 ## Step 2: Login on Openshift webconsole
-Fill in your credentials and login [this](https://manage.openshift.com/) website. 
+Fill in your credentials and login to [this](https://manage.openshift.com/) website. 
 
 When you're logged in you will get a screen to choose between the free tier subscription or the payed subscribtion. 
 
