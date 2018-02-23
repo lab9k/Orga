@@ -64,7 +64,7 @@ oc status
 
 All base images can be find on [Redhat](https://access.redhat.com/containers/)
 
-**Important**: When you are not able to build your application on your server, and when you receive the message **Quota limit reached** , you temporary have to scale down one of the other active pods! 
+**Important**: When you are not able to build your application on your server, and when you receive the message **Quota limit reached** , you temporary have to scale down one of the other active pods by clicking on the down arrow key! 
 
 ![](scale_down.PNG)
 
