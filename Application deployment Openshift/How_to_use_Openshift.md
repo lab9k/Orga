@@ -64,6 +64,12 @@ oc status
 
 All base images can be find on [Redhat](https://access.redhat.com/containers/)
 
+**Important**: When you are not able to build your application on your server, and when you receive the message **Quota limit reached** , you temporary have to scale down one of the other active pods! 
+
+![](scale down.PNG)
+
+When every other pod is done scaling, you are able to scale the unactive pod back up. 
+
 
 ### 6.1. Dotnet CORE (C#)
 
