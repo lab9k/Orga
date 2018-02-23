@@ -1,5 +1,14 @@
 # Stappenplan werken met GitHub
 
+* Inhoud
+  * Basismethode om een pull request in te dienen
+  * Een Git Push ongedaan maken
+    * D.m.v. een ID en een branch-naam
+    * D.m.v. HEAD~[commit_waar_je_naar_wilt_teruggaan]
+  * De laatste Git Push ongedaan maken
+  * Samenvatting
+  
+
 **Belangrijk: Gelieve NIET rechtstreeks op de Master branch te committen! Volg onderstaand stappenplan!**
 
 Gezien we werken met branches is het belangrijk dat iedereen hetzelfde stramien volgt. 
@@ -48,6 +57,37 @@ Stel dat je per ongeluk een branch lokaal aanmaakt maar eigenlijk wou verbinden 
   ```bash
   git branch --set-upstream-to-origin/<remote branch> <lokale branch>
   ```
+
+## Een Git Push ongedaan maken
+
+Note: Het is belangrijk dat nog geen enkele andere user jouw veranderingen reeds gepulld heeft !
+
+```
+git push -f origin last_known_good_commit:branch_name
+```
+
+* **last_known_good_commit**: Het ID van de commit waarnaar je terug wilt gaan (Dit ID kan je vinden onder 'commits' in de betreffende repository) 
+* **branch_name**: in de meeste gevallen zal dit gewoon 'master' zijn.
+
+Onderstaand commando kan je gebruiken indien je terug wenst te gaan naar de **vierde** laatste commit en een nieuwe commit wilt maken met de aanpassingen:
+
+```
+git revert HEAD~3
+```
+
+
+## De laatste Git Push ongedaan maken
+
+Note: Het **HEAD** keyword is zeer belangrijk! Indien je dit niet gebruikt zal de gehele publieke commit geschiedenis gewist worden binnen de betreffende repository !
+
+```
+git reset --hard HEAD
+```
+of:
+```
+git revert HEAD
+git commit -m 'restoring the file I removed by accident'
+```
 
 ## Samenvatting
 
