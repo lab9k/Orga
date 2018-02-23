@@ -68,7 +68,7 @@ All base images can be find on [Redhat](https://access.redhat.com/containers/)
 
 ![](scale_down.PNG)
 
-When every other pod is done scaling, you are able to scale the unactive pod back up. 
+When every other pod is done scaling, you are able to scale the unactive pod back to active. 
 
 
 ### 6.1. Dotnet CORE (C#)
