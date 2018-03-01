@@ -1,0 +1,110 @@
+<!-- Basic example to illustrate how to query linked open data from the city of ghent  -->
+<!doctype html>
+<meta charset="UTF-8">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  h1, p, div { text-align: center; }
+  html       { background: #fffffe; }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid">
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Star time</th>
+            <th>End time</th>
+            <th> url </th>
+          </tr>
+        </thead>
+        <tbody id="tablebody">
+
+
+        </tbody>
+      </table>
+
+</div>
+
+  <script>
+  function sparqlQuery(query, url, format="application/json") {
+    params={
+      "default-graph" : "",
+      "should-sponge" : "soft",
+      "query" : query,
+      "debug" : "on",
+      "timeout" : "",
+      "format" : format,
+      "save" : "display",
+      "fname" : ""
+    };
+    var querypart="?";
+
+    for (var key in params) {
+      if (params.hasOwnProperty(key)) {
+        querypart +=  key + "="+encodeURI(params[key]) + "&";
+      }
+    }
+
+    //console.log((url+querypart))
+    return url+querypart
+
+  }
+  var query = "PREFIX schema: <http://schema.org/> CONSTRUCT { ?event a schema:Event;schema:name ?name; schema:startDate ?start; schema:endDate ?end; schema:url ?url . } FROM <http://stad.gent/gentse-feesten/> WHERE { ?event a schema:Event; schema:name ?name; schema:startDate ?start; schema:endDate ?end; schema:url ?url . } LIMIT 100";
+  var url = "https://stad.gent/sparql";
+  url = sparqlQuery(query, url)
+  var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+  };
+  getJSON(url,
+    function(err, data) {
+      if (err !== null) {
+        alert('Something went wrong: ' + err);
+      } else {
+
+
+        var tableList = document.getElementById('tablebody');
+
+      for (var key in data) {
+        var nameItem = document.createElement('td');
+        var startDateItem = document.createElement('td');
+        var endDateItem = document.createElement('td');
+        var URIItem = document.createElement('td');
+        var tableItem = document.createElement('tr');
+          nameItem.textContent =data[key]["http://schema.org/name"][0]["value"];
+          startDateItem.textContent =data[key]["http://schema.org/startDate"][0]["value"];
+          endDateItem.textContent =data[key]["http://schema.org/endDate"][0]["value"];
+          URIItem.textContent =data[key]["http://schema.org/url"][0]["value"];
+
+
+          tableItem.appendChild(nameItem);
+          tableItem.appendChild(startDateItem);
+          tableItem.appendChild(endDateItem);
+          tableItem.appendChild(URIItem);
+          tableList.appendChild(tableItem);
+      }
+        }
+      });
+    </script>
+
+      </body>
+      </html>
