@@ -28,7 +28,8 @@
     * Dit zijn voordelen die niet aanwezig zijn bij een gewone LAMP stack.
 
 
-<img width="919" alt="vmvscontainer" src="https://user-images.githubusercontent.com/36444318/41443508-aa96ee60-703d-11e8-9a92-0e33b9dc9ab3.png">
+![container-vs-vms](https://user-images.githubusercontent.com/36444318/41443637-6cf82eb0-703e-11e8-8711-f3610097dfd1.jpg)
+
 
 
 ### Heroku
