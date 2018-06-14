@@ -28,6 +28,9 @@
     * Dit zijn voordelen die niet aanwezig zijn bij een gewone LAMP stack.
 
 
+
+
+
 ![container-vs-vms](https://user-images.githubusercontent.com/36444318/41443637-6cf82eb0-703e-11e8-8711-f3610097dfd1.jpg)
 
 
