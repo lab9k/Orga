@@ -100,4 +100,5 @@
 
 ![image 1](https://user-images.githubusercontent.com/36444318/41460955-8f1d16ae-708e-11e8-96da-c6c242886c1c.png)
 
+* *De prijs voor SQL Database wordt berekend op $14.72 per database per maand. Bij MySQL wordt een gemiddelde van 50GB storage genomen per maand om de prijs te berekenen. Wordt hier niet per database berekend.* 
 
