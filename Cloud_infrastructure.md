@@ -13,7 +13,7 @@
     * Wat als een stack down gaat ? Hoe wordt er gemonitord ? Moet de applicatie weer manueel gestart worden ?
     * Het uppen en scalen van applicaties verloopt hierdoor niet zo vlot -> weinig performantie.
     * De upsnelheid van een gewone stand-alone VM is **veel langer** dan de upsnelheid van een container in een COC bv. (Container Orchestration Cluster) .
-    * Elke proces/applicatie draait op Guest OS -> Voor elke VM een apart OS-image -> neemt veel geheugen in beslag , opnieuw weinig performantie.
+    * Elke proces/applicatie draait op Guest OS -> Voor elke VM een apart OS-image -> neemt veel geheugen in beslag , opnieuw weinig performantie en weinig portabiliteit.
    
 
 ![container-vs-vms](https://user-images.githubusercontent.com/36444318/41443637-6cf82eb0-703e-11e8-8711-f3610097dfd1.jpg)
