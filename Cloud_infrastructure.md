@@ -76,8 +76,8 @@
 
 * In zekere zin is dit performanter en veiliger.
 * Gebruikmakend van volgende databases (eenvoudig om te koppelen aan het Azure platform) :
-   * (MongoDB ->) **DocumentDB / Cosmos DB** : online persistentie om documenten op te slaan (bijvoorbeeld JSON-files)
-   * (MySQL ->) **SQL Database** : Entity Framework (automatische linking tussen mappers en code) -> zeer flexibel t.o.v. verschillende programmeertalen.
+   * **DocumentDB / Cosmos DB** : online persistentie om documenten op te slaan (bijvoorbeeld JSON-files)
+   * **SQL Database** : Entity Framework (automatische linking tussen mappers en code) -> zeer flexibel t.o.v. verschillende programmeertalen.
 
 
 
