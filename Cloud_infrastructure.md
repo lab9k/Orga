@@ -28,6 +28,7 @@
 
 * **Kubernetes** - container orchestration met Kubernetes verloopt tot 10x sneller als met Mesos -> veel handiger in middelmatige tot grote productie omgevingen met veel containers / applicaties. Zeer toegankelijk voor samenwerking met o.a. Azure.
 
+## Vervolg: mogelijkheden voor cloud datastoring
 
 ### Heroku
 
