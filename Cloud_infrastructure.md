@@ -35,7 +35,7 @@
 * Een cloud 'platform as a service' (PaaS) 
 * Ondersteunt projecten in verschillende programmeertalen (Python, Ruby, Java, PHP, Go, ...)
 * Handig om te linken aan GitHub repo -> bij een verandering wordt de huidige Heroku-image verwijderd en wordt een nieuwe aangemaakt met de laatste updates.
-* **Nadeel:** Het is mogelijk om containers (zgn. dyno's) te scalen via het Heroku dashboard of de Heroku CLI, maar laat dus NIET toe om een 'eigen' COC te implementeren. (Container Orchestration Cluster).
+* **Nadeel:** Het is mogelijk om containers (zgn. dyno's) te [scalen](https://www.heroku.com/dynos/scaling) via het Heroku dashboard of de Heroku CLI, maar laat dus NIET toe om een 'eigen' COC te implementeren (Container Orchestration Cluster).
    
 
 ### Microsoft Azure + cluster
