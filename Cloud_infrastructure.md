@@ -2,18 +2,6 @@
 
 ### Auteur: Ruben Bruggeman
 
-## Container Orchestration Tools
-
-* **Swarm** - Nogal zwak en basic, goede omgeving om testapplicaties te draaien maar vaak te simpel en onbetrouwbaar om te gebruiken in een productieomgeving. Ondersteuning wordt evenens afgebouwd.
-
-* **Amazon’s ECS** - enorm geëvolueerd sinds de initiele release, maar kan net zoals Swarm niet mee met grotere spelers als het op de productie omgeving aankomt. Eveneens niet cloud agnostic.
-
-* **Nomad** - Onbetrouwdbaar en een te jong project voor de productieomgeving.
-
-* **Kubernetes** - container orchestration met Kubernetes verloopt tot 10x sneller als met Mesos -> veel handiger in middelmatige tot grote productie omgevingen met veel containers / applicaties. Zeer toegankelijk voor samenwerking met o.a. Azure.
-
-
-
 ## Mogelijkheden voor cloud datastoring
 
 
@@ -28,11 +16,17 @@
     * Dit zijn voordelen die niet aanwezig zijn bij een gewone LAMP stack.
 
 
-
-
-
 ![container-vs-vms](https://user-images.githubusercontent.com/36444318/41443637-6cf82eb0-703e-11e8-8711-f3610097dfd1.jpg)
 
+## Container Orchestration Tools
+
+* **Swarm** - Nogal zwak en basic, goede omgeving om testapplicaties te draaien maar vaak te simpel en onbetrouwbaar om te gebruiken in een productieomgeving. Ondersteuning wordt evenens afgebouwd.
+
+* **Amazon’s ECS** - enorm geëvolueerd sinds de initiele release, maar kan net zoals Swarm niet mee met grotere spelers als het op de productie omgeving aankomt. Eveneens niet cloud agnostic.
+
+* **Nomad** - Onbetrouwdbaar en een te jong project voor de productieomgeving.
+
+* **Kubernetes** - container orchestration met Kubernetes verloopt tot 10x sneller als met Mesos -> veel handiger in middelmatige tot grote productie omgevingen met veel containers / applicaties. Zeer toegankelijk voor samenwerking met o.a. Azure.
 
 
 ### Heroku
