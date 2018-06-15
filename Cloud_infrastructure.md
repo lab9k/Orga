@@ -88,6 +88,13 @@
 ![kubernetescluster](https://user-images.githubusercontent.com/36444318/41456561-1f9c9ae6-7081-11e8-92a8-6063998b4146.png)
 
 
+## Pricing datapersistentie
+
+* "Data going into a SQL Database is free (“Inbound data transfers”).  Data going out of a SQL Database is free (“Outbound data transfers”) if within the same Azure data center (“region”), otherwise there is a small cost" [(bron]](http://www.jamesserra.com/archive/2016/04/azure-sql-database-pricing/)
+
+ * **Voorbeeld** :
+ 
+ ![image](https://user-images.githubusercontent.com/36444318/41460721-e06651ca-708d-11e8-8fb5-7933a8a356dd.png)
 
 
 
