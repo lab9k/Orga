@@ -83,7 +83,10 @@
    * (MongoDB ->) **DocumentDB / Cosmos DB** : online persistentie om documenten op te slaan (bijvoorbeeld JSON-files)
    * (MySQL ->) **SQL Database** : Entity Framework (automatische linking tussen mappers en code) -> zeer flexibel t.o.v. verschillende programmeertalen.
 
-(afbeelding voorstelling van cluster)
+
+
+![kubernetescluster](https://user-images.githubusercontent.com/36444318/41456561-1f9c9ae6-7081-11e8-92a8-6063998b4146.png)
+
 
 
 
