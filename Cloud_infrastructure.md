@@ -69,11 +69,19 @@
 
 * Uiteraard GEEN database per applicatie (Te duur? Neem te veel tijd in beslag? ...)
 * Er dient gebruik gemaakt te worden van de voordelen van clustering.
+
+### Eventueel een alternatieve oplossing (lokale datapersistentie in de cluster)
+
 * Een vrij optimale oplossing zou zijn dat er maximaal 2 databases in een Kubernetes cluster opgenomen zouden worden -> 'specialisatie' m.b.t. de ontwikkeling van softwareprojecten tegengaan & 'generalisatie' aanmoedigen ( ~ zoveel mogelijk gebruik maken van dezelfde programmeertalen -> consistentie)    
     * **MongoDB** : Het standaard persistentietype om documenten op te slaan (bijvoorbeeld JSON-files)
     * **MySQL** : Opensource & gemakkelijkere ondersteuning voor allerlei programmeertalen + objectgeoriënteerd.
 
+### Meest essentiële oplossing (online datapersistentie) 
 
+* In zekere zin is dit performanter en veiliger.
+* Gebruikmakend van volgende databases (eenvoudig om te koppelen aan het Azure platform) :
+   * (MongoDB ->) **DocumentDB / Cosmos DB** : online persistentie om documenten op te slaan (bijvoorbeeld JSON-files)
+   * (MySQL ->) **SQL Database** : Entity Framework (automatische linking tussen mappers en code) -> zeer flexibel t.o.v. verschillende programmeertalen.
 
 (afbeelding voorstelling van cluster)
 
