@@ -42,7 +42,8 @@
 
 * Hoogstwaarschijnlijk de meest optimale keuze
 * Gebruikmakend van een Kubernetes cluster:
-    * **De cluster bestaat in feite uit Docker containers** -> Container platform / allemaal afzonderlijke processen -> robuust en performant
+    * **De cluster bestaat in feite uit Docker containers** -> Container platform 
+      * Containers -> allemaal afzonderlijke processen -> **robuust, performant, isolatie & exporteerbaar** 
     * Microservices platform
     * Portable cloud platform
     * Deployment, scaling, load balancing, logging & monitoring
