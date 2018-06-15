@@ -8,13 +8,13 @@
 ### Pure LAMP stacks
 
 * Per applicatie dient dan in feite een LAMP stack opgebouwd te worden. D.w.z. dat er dus ook een database aan elke LAMP stack dient gekoppeld te worden. Is in ieder geval minder flexibel en minder robuust dan containers en een Kubernetes cluster. 
+* **Nadelen**:
     * Huidige situatie: Digital Ocean servers -> hogere kostprijs bij high availability etc. ?
-    * Een Kubernetes cluster maakt het in feite gemakkelijker om de controle over containers te bewaren; als een containter bijvoorbeeld down gaat, wordt deze automatisch terug herstart. 
-    * Het uppen en scalen van applicaties verloopt hierdoor zeer vlot en is zeer performant. Elke container stelt een klein proces voor.
-    * De upsnelheid van een container in een Kubernetes cluster is bijgevolg ook **veel korter** dan de upsnelheid van een gewone stand-alone VM.
-    * Elk proces in een container is een geïsoleerd proces en neemt minder geheugen in als een stand-alone VM.
-    * Dit zijn voordelen die niet aanwezig zijn bij een gewone LAMP stack.
-
+    * Wat als een stack down gaat ? Hoe wordt er gemonitord ? Moet de applicatie weer manueel gestart worden ?
+    * Het uppen en scalen van applicaties verloopt hierdoor niet zo vlot -> weinig performantie.
+    * De upsnelheid van een gewone stand-alone VM is **veel langer** dan de upsnelheid van een container in een COC bv. (Container Orchestration Cluster) .
+    * Elke proces/applicatie draait op Guest OS -> Voor elke VM een apart OS-image -> neemt veel geheugen in beslag , opnieuw weinig performantie.
+   
 
 ![container-vs-vms](https://user-images.githubusercontent.com/36444318/41443637-6cf82eb0-703e-11e8-8711-f3610097dfd1.jpg)
 
