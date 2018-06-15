@@ -90,7 +90,7 @@
 
 ## Pricing datapersistentie
 
-* "Data going into a SQL Database is free (“Inbound data transfers”).  Data going out of a SQL Database is free (“Outbound data transfers”) if within the same Azure data center (“region”), otherwise there is a small cost" [(bron]](http://www.jamesserra.com/archive/2016/04/azure-sql-database-pricing/)
+* "Data going into a SQL Database is free (“Inbound data transfers”).  Data going out of a SQL Database is free (“Outbound data transfers”) if within the same Azure data center (“region”), otherwise there is a small cost" [(bron)](http://www.jamesserra.com/archive/2016/04/azure-sql-database-pricing/)
 
  * **Voorbeeld** :
  
