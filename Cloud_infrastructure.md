@@ -43,7 +43,11 @@
 * Hoogstwaarschijnlijk de meest optimale keuze
 * Gebruikmakend van een Kubernetes cluster:
     * **De cluster bestaat in feite uit Docker containers** -> Container platform 
-      * Containers -> allemaal afzonderlijke processen -> **robuust, performant, isolatie & exporteerbaar** 
+      * Containers -> allemaal afzonderlijke processen -> **voordelen** :
+         * Robuust & performant
+         * Isolatie 
+         * Exporteerbaar
+         * Containers draaien niet op een Guest OS maar via Docker Engine -> neemt veel minder geheugen in beslag
     * Microservices platform
     * Portable cloud platform
     * Deployment, scaling, load balancing, logging & monitoring
