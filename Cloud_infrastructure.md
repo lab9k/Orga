@@ -92,9 +92,12 @@
 
 * "Data going into a SQL Database is free (“Inbound data transfers”).  Data going out of a SQL Database is free (“Outbound data transfers”) if within the same Azure data center (“region”), otherwise there is a small cost" [(bron)](http://www.jamesserra.com/archive/2016/04/azure-sql-database-pricing/)
 
- * **Voorbeeld** :
+ * **Voorbeeld voor CosmosDB, Azure MySQL en AKS** :
  
  ![image](https://user-images.githubusercontent.com/36444318/41460721-e06651ca-708d-11e8-8fb5-7933a8a356dd.png)
 
+* **Voorbeeld voor CosmosDB, Azure SQL Database en AKS** :
+
+![image 1](https://user-images.githubusercontent.com/36444318/41460955-8f1d16ae-708e-11e8-96da-c6c242886c1c.png)
 
 
