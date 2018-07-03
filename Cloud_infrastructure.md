@@ -85,12 +85,12 @@
 
 -   **Voorbeeld voor CosmosDB, Azure MySQL en AKS** :
 
-![image](https://user-images.githubusercontent.com/36444318/41460721-e06651ca-708d-11e8-8fb5-7933a8a356dd.png)
+| Service                  | Cost                              |
+| ------------------------ | --------------------------------: |
+| Azure Kubernetes service | 50 Euro (25 Euro per extra node)  |
+| Azure CosmosDB (MongoDB) | 50 Euro                           |
+| Azure PostgreSQL         | 25 Euro                           |
+| CI/CD Building node      | 16 Euro (Meerdere in de toekomst) |
+| Totaal per maand:        | 141 Euro                          |
+| Totaal per jaar:         | 1692 Euro                         |
 
--   **Voorbeeld voor CosmosDB, Azure SQL Database en AKS** :
-
-![image 1](https://user-images.githubusercontent.com/36444318/41460955-8f1d16ae-708e-11e8-96da-c6c242886c1c.png)
-
--   _De prijs voor SQL Database wordt berekend op $14.72 per database per maand. Bij MySQL wordt een gemiddelde van 50GB storage genomen per maand om de prijs te berekenen. Wordt hier niet per database berekend._
-
--   _Om een vlotte CI/CD te hanteren is het aan te raden om een "self-hosted" server te voorzien die de builds van de Docker images voor zich neemt. Dit zou neerkomen op een extra kost van 16 euro/maand._
