@@ -102,4 +102,4 @@
 
 * *De prijs voor SQL Database wordt berekend op $14.72 per database per maand. Bij MySQL wordt een gemiddelde van 50GB storage genomen per maand om de prijs te berekenen. Wordt hier niet per database berekend.* 
 
-* *Om een vlotte CI/CD te hanteren is het aan te raden om een "self-hosted" server te voorzien die de builds van de Docker images voor zich neemt. Dit zou neerkomen op een extra kost van 16 euro/maand. 
+* Om een vlotte CI/CD te hanteren is het aan te raden om een "self-hosted" server te voorzien die de builds van de Docker images voor zich neemt. Dit zou neerkomen op een extra kost van 16 euro/maand. 
