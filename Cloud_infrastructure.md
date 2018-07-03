@@ -90,7 +90,7 @@
 | Azure Kubernetes service | 50 Euro (25 Euro per extra node)  |
 | Azure CosmosDB (MongoDB) | 50 Euro                           |
 | Azure PostgreSQL         | 25 Euro                           |
-| CI/CD Building node      | 16 Euro (Meerdere in de toekomst) |
+| CI/CD Building node      | 16 Euro |
 | Totaal per maand:        | 141 Euro                          |
 | Totaal per jaar:         | 1692 Euro                         |
 
